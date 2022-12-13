@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HGx-mc-yMG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cryptocurrencies-->
+        <scene sceneID="AOT-M0-CgE">
+            <objects>
+                <tableViewController id="AG1-pK-qPR" customClass="TableViewController" customModule="MVVM_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pNf-kz-0z7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="KII-Uc-ZUu">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="AG1-pK-qPR" id="SIN-9c-uyA"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="64" id="AMU-CN-c0u" customClass="TableViewCell" customModule="MVVM_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AMU-CN-c0u" id="QgI-h7-QSQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNE-37-T8A">
+                                            <rect key="frame" x="102" y="11.5" width="42" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb7-PS-cIh">
+                                            <rect key="frame" x="352" y="12" width="42" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-Ja-T50">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="0Rz-Ob-MBH"/>
+                                                <constraint firstAttribute="width" constant="79" id="gPA-0R-2z1"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Qb7-PS-cIh" secondAttribute="bottom" constant="12" id="B8P-E9-EGa"/>
+                                        <constraint firstItem="gNE-37-T8A" firstAttribute="centerY" secondItem="QgI-h7-QSQ" secondAttribute="centerY" id="CzZ-dr-RcE"/>
+                                        <constraint firstItem="gNE-37-T8A" firstAttribute="top" secondItem="QgI-h7-QSQ" secondAttribute="top" constant="11.5" id="Ie1-P8-ZdO"/>
+                                        <constraint firstAttribute="bottom" secondItem="gNE-37-T8A" secondAttribute="bottom" constant="11.5" id="On3-xw-AmX"/>
+                                        <constraint firstItem="Qb7-PS-cIh" firstAttribute="top" secondItem="QgI-h7-QSQ" secondAttribute="top" constant="12" id="Slo-p7-Jhj"/>
+                                        <constraint firstItem="Qb7-PS-cIh" firstAttribute="centerY" secondItem="QgI-h7-QSQ" secondAttribute="centerY" id="T6Y-Ju-KBy"/>
+                                        <constraint firstItem="AGn-Ja-T50" firstAttribute="leading" secondItem="QgI-h7-QSQ" secondAttribute="leadingMargin" constant="-20" id="VZi-kp-QTl"/>
+                                        <constraint firstAttribute="bottom" secondItem="AGn-Ja-T50" secondAttribute="bottom" id="ZT8-tZ-aT8"/>
+                                        <constraint firstItem="AGn-Ja-T50" firstAttribute="top" secondItem="QgI-h7-QSQ" secondAttribute="top" id="asE-lw-Xhp"/>
+                                        <constraint firstItem="Qb7-PS-cIh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gNE-37-T8A" secondAttribute="trailing" constant="8" symbolic="YES" id="bP3-ot-Zja"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qb7-PS-cIh" secondAttribute="trailing" constant="20" symbolic="YES" id="oP5-nS-9qX"/>
+                                        <constraint firstItem="gNE-37-T8A" firstAttribute="leading" secondItem="AGn-Ja-T50" secondAttribute="trailing" constant="23" id="rgm-xy-Dqf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageViewModel" destination="AGn-Ja-T50" id="q5B-G5-HvR"/>
+                                    <outlet property="nameCrypto" destination="gNE-37-T8A" id="wsQ-q1-xLn"/>
+                                    <outlet property="priceLabel" destination="Qb7-PS-cIh" id="Ty4-f2-MDp"/>
+                                    <outlet property="searchBar" destination="KII-Uc-ZUu" id="75O-Sw-Hdl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AG1-pK-qPR" id="6W1-2f-wec"/>
+                            <outlet property="delegate" destination="AG1-pK-qPR" id="RE3-JZ-6K3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cryptocurrencies" id="vHm-hG-plm"/>
+                    <connections>
+                        <outlet property="search" destination="KII-Uc-ZUu" id="dIK-aY-aFg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9m-xA-6Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="76.339285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aUF-mj-NtW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HGx-mc-yMG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="lNJ-g5-gac">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AG1-pK-qPR" kind="relationship" relationship="rootViewController" id="nWb-AR-zNq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mO9-QU-drz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
